@@ -192,12 +192,12 @@ int bitCount(int x) {
   	m4 = m4<<16|m4; 
 
 	x = x + (~((x >> 1) & m1)+1);
-    x = (x & m2) + ((x >> 2) & m2);
-    x = (x + (x >> 4)) & m4;
-    x += x >>  8;
-    x += x >> 16;
+    	x = (x & m2) + ((x >> 2) & m2);
+    	x = (x + (x >> 4)) & m4;
+    	x += x >>  8;
+    	x += x >> 16;
 
-    return x & 0x7f;
+    	return x & 0x7f;
 
 }
 /* 
@@ -254,7 +254,7 @@ int divpwr2(int x, int n) {
 	sign = (x>>31)&1;
 	r = x>>n;
 	e = !(x^(r<<n));
-	//Round toward zero
+	//aproximcion a 0
 	r = r + ((!e)&sign);
 
     return r;
@@ -337,12 +337,12 @@ int ilog2(int x) {
   	m4 = m4<<16|m4; 
 
 	x = x + (~((x >> 1) & m1)+1);
-    x = (x & m2) + ((x >> 2) & m2);
-    x = (x + (x >> 4)) & m4;
-    x += x >>  8;
-    x += x >> 16;
+    	x = (x & m2) + ((x >> 2) & m2);
+    	x = (x + (x >> 4)) & m4;
+    	x += x >>  8;
+    	x += x >> 16;
 
-    return (x & 0x7f)+(~1+1);
+    	return (x & 0x7f)+(~1+1);
 }
 /* 
  * float_neg - Return bit-level equivalent of expression -f for
